@@ -1,0 +1,91 @@
+﻿@page
+@model ParkingZone.Areas.Identity.Pages.Account.VerifyCodeModel
+@{
+    ViewData["Title"] = "Verify Code";
+}
+
+<div class="container mt-5">
+    <div class="row justify-content-center">
+        <div class="col-md-6">
+            <div class="card shadow-lg">
+                <div class="card-header bg-primary text-white">
+                    <h3 class="card-title text-center">Verify Code</h3>
+                </div>
+                <div class="card-body">
+                    <div class="text-center">
+                        <p id="timer-container">Qolgan vaqt: <span id="timer">02:00</span></p> <!-- Taymerni qo'shish -->
+                    </div>
+
+                    @if (ModelState.Any())
+                    {
+                        <div class="alert alert-danger">
+                            @foreach (var modelState in ModelState)
+                            {
+                                foreach (var error in modelState.Value.Errors)
+                                {
+                                    <div>@error.ErrorMessage</div>
+                                }
+                            }
+                        </div>
+                    }
+
+                    <form method="post">
+                        <div class="form-group mb-3">
+                            <label asp-for="Input.Code" class="control-label"></label>
+                            <input asp-for="Input.Code" class="form-control" />
+                            <span asp-validation-for="Input.Code" class="text-danger"></span>
+                        </div>
+                        <div class="form-group text-center">
+                            <button type="submit" class="btn btn-primary btn-lg">Verify</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+@section Scripts {
+    <script>
+        // Taymer funksiyasi
+        function startTimer(duration, display) {
+            var timer = duration, minutes, seconds;
+            var interval = setInterval(function () {
+                minutes = parseInt(timer / 60, 10);
+                seconds = parseInt(timer % 60, 10);
+
+                minutes = minutes < 10 ? "0" + minutes : minutes;
+                seconds = seconds < 10 ? "0" + seconds : seconds;
+
+                display.textContent = minutes + ":" + seconds;
+
+                if (--timer < 0) {
+                    clearInterval(interval); // Taymer tugashi bilan interval to'xtaydi
+                    document.getElementById('timer-container').style.display = 'none'; // Taymerni yashirish
+                    localStorage.removeItem('timer'); // Timer qiymatini o'chirish
+                } else {
+                    // Har bir soniyada timerni saqlab borish
+                    localStorage.setItem('timer', timer);
+                }
+            }, 1000);
+        }
+
+        // Taymerni qayta ishga tushirish
+        function initTimer() {
+            var savedTime = localStorage.getItem('timer');
+            var twoMinutes = 60 * 2; // 2 daqiqa
+
+            // Agar taymer oldin saqlangan bo'lsa, undan foydalanamiz
+            if (savedTime !== null && savedTime > 0) {
+                startTimer(parseInt(savedTime), document.querySelector('#timer'));
+            } else {
+                startTimer(twoMinutes, document.querySelector('#timer'));
+            }
+        }
+
+        // Sahifa yuklanganda taymerni boshlash
+        window.onload = function () {
+            initTimer(); // Taymerni boshlash
+        };
+    </script>
+}

@@ -1,0 +1,69 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+
+<div class="container mt-5">
+    <div class="text-center">
+        <h1 class="display-4 text-primary">Welcome to Parking Zone</h1>
+        <p class="lead">Your hassle-free parking experience starts here</p>
+        <hr class="my-4">
+        <p>We offer convenient and secure parking reservations with real-time availability and easy access.</p>
+        <a class="btn btn-lg btn-primary mt-3" href="/User/Reservations/Index" role="button">View Your Reservations</a>
+    </div>
+
+    <div class="row mt-5">
+        <div class="col-md-4">
+            <div class="card shadow-sm">
+                <div class="card-body text-center">
+                    <h5 class="card-title">Real-Time Availability</h5>
+                    <p class="card-text">Check available parking spots in real-time, ensuring you always find a place to park.</p>
+                    <i class="fas fa-parking fa-2x text-primary"></i>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="card shadow-sm">
+                <div class="card-body text-center">
+                    <h5 class="card-title">Easy Reservations</h5>
+                    <p class="card-text">Reserve your spot ahead of time and avoid the stress of searching for parking.</p>
+                    <i class="fas fa-calendar-check fa-2x text-primary"></i>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="card shadow-sm">
+                <div class="card-body text-center">
+                    <h5 class="card-title">Secure Parking</h5>
+                    <p class="card-text">Enjoy peace of mind with our safe and secure parking zones equipped with surveillance.</p>
+                    <i class="fas fa-shield-alt fa-2x text-primary"></i>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="row mt-5">
+        <div class="col-md-6">
+            <h3>About Us</h3>
+            <p>
+                Parking Zone strives to provide a seamless parking experience. 
+                We offer easy-to-use parking solutions with features such as reservation management, 
+                real-time availability and safe zones. Our mission is to make parking stress-free 
+                so you can focus on what's important. As this project is one of our first major projects, 
+                we apologize for some of the bugs and will continue to research the project and try to fix it. 
+                Thank you for your understanding!
+            </p>
+            <a class="btn btn-secondary" href="Identity/Account/Register">Register Now</a>
+        </div>
+        <div class="col-md-6">
+            <img src="Images/parking-lot.png" class="img-fluid rounded shadow-sm" alt="Parking lot" />
+        </div>
+    </div>
+</div>
+
+@section Scripts {
+    <script>
+        $(function () {
+            $('[data-toggle="tooltip"]').tooltip();
+        });
+    </script>
+}

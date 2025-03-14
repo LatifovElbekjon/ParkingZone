@@ -1,0 +1,33 @@
+﻿@model ParkingZone.ViewModels.ZoneVMs.DetailsParkingZoneViewModel
+
+@{
+    ViewData["Title"] = "Parking Zone Details";
+}
+
+<div class="container mt-5">
+    <div class="row justify-content-center">
+        <div class="col-md-8">
+            <div class="card shadow-lg">
+                <div class="card-header bg-info text-white">
+                    <h3 class="card-title text-center">Parking Zone Details</h3>
+                </div>
+                <div class="card-body">
+                    <dl class="row">
+                        <dt class="col-sm-4">@Html.DisplayNameFor(model => model.Name)</dt>
+                        <dd class="col-sm-8">@Html.DisplayFor(model => model.Name)</dd>
+
+                        <dt class="col-sm-4">@Html.DisplayNameFor(model => model.EstablishedDate)</dt>
+                        <dd class="col-sm-8">@Html.DisplayFor(model => model.EstablishedDate)</dd>
+
+                        <dt class="col-sm-4">@Html.DisplayNameFor(model => model.Address)</dt>
+                        <dd class="col-sm-8">@Html.DisplayFor(model => model.Address)</dd>
+                    </dl>
+                </div>
+                <div class="card-footer d-flex justify-content-between">
+                    <a asp-action="Edit" asp-route-zoneId="@Model?.Id" class="btn btn-primary">Edit</a>
+                    <a asp-action="Index" class="btn btn-secondary">Back to List</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

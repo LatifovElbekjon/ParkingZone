@@ -1,0 +1,62 @@
+﻿@model ParkingZone.ViewModels.SlotVMs.DetailsSlotViewModel
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<div class="container mt-5">
+    <div class="row justify-content-center">
+        <div class="col-md-8">
+            <div class="card shadow-lg">
+                <div class="card-header bg-info text-white">
+                    <h3 class="card-title">@Model.SlotNumber - Slot Details</h3>
+                </div>
+                <div class="card-body">
+                    <dl class="row">
+                        <dt class="col-sm-4">@Html.DisplayNameFor(model => model.SlotNumber)</dt>
+                        <dd class="col-sm-8">@Html.DisplayFor(model => model.SlotNumber)</dd>
+
+                        <dt class="col-sm-4">Based Zone</dt>
+                        <dd class="col-sm-8">@ViewData["ZoneName"]</dd>
+
+                        <dt class="col-sm-4">@Html.DisplayNameFor(model => model.IsAvailableForBooking)</dt>
+                        <dd class="col-sm-8">@Html.DisplayFor(model => model.IsAvailableForBooking)</dd>
+
+                        <dt class="col-sm-4">@Html.DisplayNameFor(model => model.Tariff)</dt>
+                        <dd class="col-sm-8">@Html.DisplayFor(model => model.Tariff)</dd>
+                    </dl>
+
+                    <div class="d-flex justify-content-between">
+                        @if (ViewBag.Warning == null)
+                        {
+                            <a asp-controller="Slots" asp-action="Edit" asp-route-slotId="@Model.SlotId" class="btn btn-primary">Edit</a>
+                        }
+                        else
+                        {
+                            <a class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#warningModal">Edit</a>
+
+                            <!-- Modal -->
+                            <div class="modal fade" id="warningModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                <div class="modal-dialog">
+                                    <div class="modal-content">
+                                        <div class="modal-header">
+                                            <h5 class="modal-title" id="exampleModalLabel">Warning</h5>
+                                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                        </div>
+                                        <div class="modal-body">
+                                            This slot has active reservations, so you can't change it.
+                                        </div>
+                                        <div class="modal-footer">
+                                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        }
+                        <a asp-action="Index" asp-route-zoneId="@Model.ZoneId" class="btn btn-secondary">Back to List</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

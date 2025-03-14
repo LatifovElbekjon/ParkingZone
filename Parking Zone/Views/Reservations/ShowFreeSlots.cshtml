@@ -1,0 +1,47 @@
+﻿@model ParkingZone.ViewModels.ReservationVMs.FreeSlotsViewModel
+
+@{
+    ViewData["Title"] = "ShowFreeSlots";
+}
+
+<h1>Free slots for @Model.ZoneName</h1>
+@if(Model.FreeSlots is not null)
+{
+    <table class="table">
+        <thead>
+            <tr>
+                <th>
+                    Number
+                </th>
+                <th>
+                    Tariff
+                </th>
+                <th></th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var item in Model.FreeSlots)
+            {
+                <tr>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Number)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Tariff)
+                    </td>
+                    <td>
+                        <a asp-controller="Reservations" asp-action="Reserve"
+                        asp-route-slotId="@item.Id" asp-route-startTime="@Model.StartTime.ToString("g")" asp-route-duration="@Model.Duration">Select</a>
+                        @*  @Html.ActionLink("Details", "Details", new { /* id=item.PrimaryKey */ }) |
+                @Html.ActionLink("Delete", "Delete", new { /* id=item.PrimaryKey */ }) *@
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+}
+else
+{
+    <h1 style="text-align:center;">Free slots not found</h1>
+}
+

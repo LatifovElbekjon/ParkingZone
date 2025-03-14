@@ -1,0 +1,42 @@
+﻿@model ParkingZone.ViewModels.ReservationVMs.ReservationViewModel
+
+@{
+    ViewData["Title"] = "Reservation";
+}
+<hr />
+@if (ViewBag.SuccessMessage != null)
+{
+    <div>
+        <h2 class="control-label" style="color:green;"> @ViewBag.SuccessMessage</h2>
+    </div>
+}
+<div>
+    <label class="control-label"> Zone @Model.ZoneName</label>
+</div>
+<div>
+    <label class="control-label">Slot number @Model.SlotNumber</label>
+</div>
+<form class="form-group" asp-action="Reserve" method="post" style="width:30%; margin:0% 35%;" id="reservationForm">
+    <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+    <input type="hidden" asp-for="SlotId" class="form-control" />
+    <input type="hidden" asp-for="SlotNumber" class="form-control" />
+    <div class="mb-3">
+        <label asp-for="StartTime" class="control-label"></label>
+        <input asp-for="StartTime" class="form-control" id="startTimeInput" />
+        <span asp-validation-for="StartTime" class="text-danger"></span>
+    </div>
+    <div class="mb-3">
+        <label asp-for="Duration" class="control-label"></label>
+        <input asp-for="Duration" class="form-control" id="durationInput" />
+        <span asp-validation-for="Duration" class="text-danger"></span>
+    </div>
+    <div class="mb-3">
+        <input type="submit" value="Select" class="btn btn-primary" style="width:100%;" />
+    </div>
+</form>
+
+@section Scripts {
+    @{
+        await Html.RenderPartialAsync("_ValidationScriptsPartial");
+    }
+}

@@ -1,0 +1,44 @@
+﻿@model ParkingZone.ViewModels.ReservationVMs.ProlongViewModel
+
+@{
+    ViewData["Title"] = "Prolong";
+}
+
+<h1>Prolong</h1>
+<div>
+    <h3>Zone Addres: @Model.ZoneAddress </h3>
+</div>
+<div>
+    <h3>Slot number: @Model.SlotNumber </h3>
+</div>
+<div>
+    <h3>End date: @Model.EndDate </h3>
+</div>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Prolong">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <input type="hidden" asp-for="ReservationId" class="form-control" />
+                <span asp-validation-for="ReservationId" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="AdditionalHours" class="control-label"></label>
+                <input asp-for="AdditionalHours" class="form-control" />
+                <span asp-validation-for="AdditionalHours" class="text-danger"></span>
+            </div><br />
+            <div class="form-group">
+                <input type="submit" value="Save" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

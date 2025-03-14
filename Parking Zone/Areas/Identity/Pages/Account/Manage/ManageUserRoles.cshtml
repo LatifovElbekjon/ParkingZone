@@ -1,0 +1,23 @@
+﻿@page
+@model ParkingZone.Areas.Identity.Pages.Account.Manage.ManageUserRolesModel
+@{
+    ViewData["Title"] = "Manage User Roles";
+}
+
+<h1>Manage User Roles</h1>
+
+<form method="post">
+    <div class="form-group">
+        <label for="email">Email</label>
+        <input type="email" id="email" name="Email" class="form-control" />
+    </div><br />
+    <button type="submit" class="btn btn-primary">Change to Admin</button>
+</form>
+
+@if (Model.Message != null)
+{
+    <div class="alert alert-info">
+        @Model.Message
+    </div>
+}
+

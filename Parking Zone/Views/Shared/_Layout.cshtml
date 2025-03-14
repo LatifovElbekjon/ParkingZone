@@ -1,0 +1,149 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - Parking_Zone</title>
+
+    <!-- Custom Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+    <!-- Bootstrap and Custom CSS -->
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/Parking_Zone.styles.css" asp-append-version="true" />
+
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+        }
+
+        /* Navbar Styling */
+        .navbar {
+            background: linear-gradient(90deg, rgba(34,193,195,1) 0%, rgba(253,187,45,1) 100%);
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        }
+
+        .navbar-brand {
+            font-weight: 600;
+            color: #fff;
+        }
+
+        .nav-link {
+            color: #fff !important;
+            font-weight: 500;
+        }
+
+            .nav-link:hover {
+                color: #ffd700 !important;
+            }
+
+            /* Add Icons */
+            .nav-link::before {
+                content: '🡆 ';
+                font-size: 0.8rem;
+                color: #ffd700;
+            }
+
+        /* Footer Styling */
+        footer {
+            background-color: #343a40;
+            color: #fff;
+            padding: 20px 0;
+        }
+
+            footer a {
+                color: #ffd700;
+            }
+
+                footer a:hover {
+                    color: #ffffff;
+                }
+
+        /* Content Styling */
+        main {
+            padding: 20px;
+            background-color: #f8f9fa;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        }
+
+        /* Button Styling */
+        .btn-custom {
+            background-color: #22c1c3;
+            color: #fff;
+            border: none;
+        }
+
+            .btn-custom:hover {
+                background-color: #ffbc45;
+            }
+    </style>
+</head>
+<body>
+    <header>
+        <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3">
+            <div class="container-fluid">
+                <a class="navbar-brand">🚗 Parking Zone</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target=".navbar-collapse" aria-controls="navbarSupportedContent"
+                        aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="navbar-collapse collapse d-sm-inline-flex justify-content-between">
+                    <ul class="navbar-nav flex-grow-1">
+                        <li class="nav-item">
+                            <a class="nav-link" asp-area="" asp-controller="Home" asp-action="Index">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" asp-area="" asp-controller="Reservations" asp-action="FreeSlots">Reservation</a>
+                        </li>
+                        @if (User.Identity!.IsAuthenticated)
+                        {
+                            <li class="nav-item">
+                                <a class="nav-link" asp-area="User" asp-controller="Reservations" asp-action="Index">My reservations</a>
+                            </li>
+                        }
+                        @if (User.Identity!.IsAuthenticated && User.IsInRole("Admin"))
+                        {
+                            <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle" href="#" id="adminSettingsDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                    Admin Settings
+                                </a>
+                                <ul class="dropdown-menu" aria-labelledby="adminSettingsDropdown">
+                                    <li><a class="dropdown-item" asp-area="User" asp-controller="Users" asp-action="Admins">Admins</a></li>
+                                    <li><a class="dropdown-item" asp-area="User" asp-controller="Users" asp-action="Index">Users</a></li>
+                                    <li><a class="dropdown-item" asp-area="Admin" asp-controller="ParkingZones" asp-action="Index">Zones</a></li>
+                                </ul>
+                            </li>
+                        }
+                    </ul>
+                    <partial name="_LoginPartial" />
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <div class="container">
+        <main role="main" class="pb-3">
+            @RenderBody()
+        </main>
+    </div>
+
+    <footer class="border-top footer text-muted">
+        <div class="container d-flex justify-content-between">
+            <span>&copy; 2024 - Parking_Zone</span>
+            <span>
+                <a asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a> |
+                <a href="#">Terms of Service</a> |
+                <a href="tg://resolve?domain=ElbekLatifov">Contact Us</a>
+            </span>
+        </div>
+    </footer>
+
+    <!-- Bootstrap and jQuery -->
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="~/js/site.js" asp-append-version="true"></script>
+    @await RenderSectionAsync("Scripts", required: false)
+</body>
+</html>

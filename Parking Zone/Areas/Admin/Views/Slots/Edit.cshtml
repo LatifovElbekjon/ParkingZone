@@ -1,0 +1,59 @@
+﻿@using ParkingZone.Enums
+@model ParkingZone.ViewModels.SlotVMs.EditSlotViewModel
+
+@{
+    ViewData["Title"] = "Edit Slot";
+}
+
+<div class="container mt-5">
+    <div class="row justify-content-center">
+        <div class="col-md-8">
+            <div class="card shadow-lg">
+                <div class="card-header bg-primary text-white">
+                    <h3 class="card-title">Edit Slot Number @Model.Number</h3>
+                </div>
+                <div class="card-body">
+                    @if (ViewBag.Warning != null)
+                    {
+                        <div class="alert alert-danger">
+                            <strong>Warning:</strong> @ViewBag.Warning
+                        </div>
+                    }
+
+                    <form asp-action="Edit">
+                        <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+                        <input asp-for="Id" type="hidden" />
+                        <input asp-for="ZoneId" type="hidden" />
+                        <div class="form-group mb-3">
+                            <label asp-for="Number" class="form-label"></label>
+                            <input asp-for="Number" class="form-control" />
+                            <span asp-validation-for="Number" class="text-danger"></span>
+                        </div>
+                        <div class="form-group form-check mb-3">
+                            <input asp-for="IsAvailableForBooking" type="checkbox" class="form-check-input" />
+                            <label class="form-check-label" asp-for="IsAvailableForBooking">@Html.DisplayNameFor(model => model.IsAvailableForBooking)</label>
+                        </div>
+                        <div class="form-group mb-3">
+                            <label for="Tariff" class="form-label">Tariff</label>
+                            <select asp-for="Tariff" id="Tariff" class="form-select" asp-items="Html.GetEnumSelectList<ESlotCategory>()">
+                                <option value="">Select Tariff</option>
+                            </select>
+                        </div>
+                        <div class="form-group mb-3">
+                            <input type="submit" value="Save" class="btn btn-primary" />
+                        </div>
+                    </form>
+                </div>
+                <div class="card-footer">
+                    <a asp-action="Index" asp-route-zoneId="@Model.ZoneId" class="btn btn-secondary">Back to List</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+@section Scripts {
+    @{
+        await Html.RenderPartialAsync("_ValidationScriptsPartial");
+    }
+}

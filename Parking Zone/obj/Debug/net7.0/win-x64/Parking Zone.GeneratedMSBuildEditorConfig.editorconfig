@@ -1,0 +1,183 @@
+is_global = true
+build_property.TargetFramework = net7.0
+build_property.TargetPlatformMinVersion = 
+build_property.UsingMicrosoftNETSdkWeb = true
+build_property.ProjectTypeGuids = 
+build_property.InvariantGlobalization = 
+build_property.PlatformNeutralAssembly = 
+build_property.EnforceExtendedAnalyzerRules = 
+build_property._SupportedPlatformList = Linux,macOS,Windows
+build_property.RootNamespace = ParkingZone
+build_property.RootNamespace = ParkingZone
+build_property.ProjectDir = D:\C#Projects\ParkingZoneProject\ParkingZone\Parking Zone\
+build_property.EnableComHosting = 
+build_property.EnableGeneratedComInterfaceComImportInterop = 
+build_property.RazorLangVersion = 7.0
+build_property.SupportLocalizedComponentNames = 
+build_property.GenerateRazorMetadataSourceChecksumAttributes = 
+build_property.MSBuildProjectDirectory = D:\C#Projects\ParkingZoneProject\ParkingZone\Parking Zone
+build_property._RazorSourceGeneratorDebug = 
+
+[D:/C\#Projects/ParkingZoneProject/ParkingZone/Parking Zone/Areas/Admin/Views/ParkingZones/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcUGFya2luZ1pvbmVzXENyZWF0ZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/C\#Projects/ParkingZoneProject/ParkingZone/Parking Zone/Areas/Admin/Views/ParkingZones/Delete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcUGFya2luZ1pvbmVzXERlbGV0ZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/C\#Projects/ParkingZoneProject/ParkingZone/Parking Zone/Areas/Admin/Views/ParkingZones/Details.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcUGFya2luZ1pvbmVzXERldGFpbHMuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/C\#Projects/ParkingZoneProject/ParkingZone/Parking Zone/Areas/Admin/Views/ParkingZones/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcUGFya2luZ1pvbmVzXEVkaXQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/C\#Projects/ParkingZoneProject/ParkingZone/Parking Zone/Areas/Admin/Views/ParkingZones/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcUGFya2luZ1pvbmVzXEluZGV4LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/C\#Projects/ParkingZoneProject/ParkingZone/Parking Zone/Areas/Admin/Views/Slots/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcU2xvdHNcQ3JlYXRlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/C\#Projects/ParkingZoneProject/ParkingZone/Parking Zone/Areas/Admin/Views/Slots/Delete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcU2xvdHNcRGVsZXRlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/C\#Projects/ParkingZoneProject/ParkingZone/Parking Zone/Areas/Admin/Views/Slots/Details.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcU2xvdHNcRGV0YWlscy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/C\#Projects/ParkingZoneProject/ParkingZone/Parking Zone/Areas/Admin/Views/Slots/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcU2xvdHNcRWRpdC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/C\#Projects/ParkingZoneProject/ParkingZone/Parking Zone/Areas/Admin/Views/Slots/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcU2xvdHNcSW5kZXguY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/C\#Projects/ParkingZoneProject/ParkingZone/Parking Zone/Areas/Admin/Views/_ViewImports.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/C\#Projects/ParkingZoneProject/ParkingZone/Parking Zone/Areas/Admin/Views/_ViewStart.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcX1ZpZXdTdGFydC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/C\#Projects/ParkingZoneProject/ParkingZone/Parking Zone/Areas/Identity/Pages/Account/Login.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSWRlbnRpdHlcUGFnZXNcQWNjb3VudFxMb2dpbi5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/C\#Projects/ParkingZoneProject/ParkingZone/Parking Zone/Areas/Identity/Pages/Account/Logout.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSWRlbnRpdHlcUGFnZXNcQWNjb3VudFxMb2dvdXQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/C\#Projects/ParkingZoneProject/ParkingZone/Parking Zone/Areas/Identity/Pages/Account/Manage/ChangePassword.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSWRlbnRpdHlcUGFnZXNcQWNjb3VudFxNYW5hZ2VcQ2hhbmdlUGFzc3dvcmQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/C\#Projects/ParkingZoneProject/ParkingZone/Parking Zone/Areas/Identity/Pages/Account/Manage/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSWRlbnRpdHlcUGFnZXNcQWNjb3VudFxNYW5hZ2VcSW5kZXguY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/C\#Projects/ParkingZoneProject/ParkingZone/Parking Zone/Areas/Identity/Pages/Account/Manage/ManageUserRoles.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSWRlbnRpdHlcUGFnZXNcQWNjb3VudFxNYW5hZ2VcTWFuYWdlVXNlclJvbGVzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/C\#Projects/ParkingZoneProject/ParkingZone/Parking Zone/Areas/Identity/Pages/Account/Manage/_Layout.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSWRlbnRpdHlcUGFnZXNcQWNjb3VudFxNYW5hZ2VcX0xheW91dC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/C\#Projects/ParkingZoneProject/ParkingZone/Parking Zone/Areas/Identity/Pages/Account/Profile.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSWRlbnRpdHlcUGFnZXNcQWNjb3VudFxQcm9maWxlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/C\#Projects/ParkingZoneProject/ParkingZone/Parking Zone/Areas/Identity/Pages/Account/Register.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSWRlbnRpdHlcUGFnZXNcQWNjb3VudFxSZWdpc3Rlci5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/C\#Projects/ParkingZoneProject/ParkingZone/Parking Zone/Areas/Identity/Pages/Account/VerifyCode.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSWRlbnRpdHlcUGFnZXNcQWNjb3VudFxWZXJpZnlDb2RlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/C\#Projects/ParkingZoneProject/ParkingZone/Parking Zone/Areas/Identity/Pages/_ValidationScriptsPartial.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSWRlbnRpdHlcUGFnZXNcX1ZhbGlkYXRpb25TY3JpcHRzUGFydGlhbC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/C\#Projects/ParkingZoneProject/ParkingZone/Parking Zone/Areas/Identity/Pages/_ViewImports.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSWRlbnRpdHlcUGFnZXNcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/C\#Projects/ParkingZoneProject/ParkingZone/Parking Zone/Areas/Identity/Pages/_ViewStart.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSWRlbnRpdHlcUGFnZXNcX1ZpZXdTdGFydC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/C\#Projects/ParkingZoneProject/ParkingZone/Parking Zone/Areas/User/Views/Reservations/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcVXNlclxWaWV3c1xSZXNlcnZhdGlvbnNcSW5kZXguY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/C\#Projects/ParkingZoneProject/ParkingZone/Parking Zone/Areas/User/Views/Reservations/Prolong.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcVXNlclxWaWV3c1xSZXNlcnZhdGlvbnNcUHJvbG9uZy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/C\#Projects/ParkingZoneProject/ParkingZone/Parking Zone/Areas/User/Views/Users/Admins.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcVXNlclxWaWV3c1xVc2Vyc1xBZG1pbnMuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/C\#Projects/ParkingZoneProject/ParkingZone/Parking Zone/Areas/User/Views/Users/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcVXNlclxWaWV3c1xVc2Vyc1xJbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/C\#Projects/ParkingZoneProject/ParkingZone/Parking Zone/Areas/User/Views/_ViewImports.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcVXNlclxWaWV3c1xfVmlld0ltcG9ydHMuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/C\#Projects/ParkingZoneProject/ParkingZone/Parking Zone/Areas/User/Views/_ViewStart.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcVXNlclxWaWV3c1xfVmlld1N0YXJ0LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/C\#Projects/ParkingZoneProject/ParkingZone/Parking Zone/Views/Home/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxJbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/C\#Projects/ParkingZoneProject/ParkingZone/Parking Zone/Views/Home/Privacy.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxQcml2YWN5LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/C\#Projects/ParkingZoneProject/ParkingZone/Parking Zone/Views/Reservations/FreeSlots.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUmVzZXJ2YXRpb25zXEZyZWVTbG90cy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/C\#Projects/ParkingZoneProject/ParkingZone/Parking Zone/Views/Reservations/Reserve.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUmVzZXJ2YXRpb25zXFJlc2VydmUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/C\#Projects/ParkingZoneProject/ParkingZone/Parking Zone/Views/Reservations/ShowFreeSlots.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUmVzZXJ2YXRpb25zXFNob3dGcmVlU2xvdHMuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/C\#Projects/ParkingZoneProject/ParkingZone/Parking Zone/Views/Shared/Error.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXEVycm9yLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/C\#Projects/ParkingZoneProject/ParkingZone/Parking Zone/Views/Shared/_LoginPartial.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9Mb2dpblBhcnRpYWwuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/C\#Projects/ParkingZoneProject/ParkingZone/Parking Zone/Views/Shared/_ValidationScriptsPartial.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/C\#Projects/ParkingZoneProject/ParkingZone/Parking Zone/Views/_ViewImports.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/C\#Projects/ParkingZoneProject/ParkingZone/Parking Zone/Views/_ViewStart.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdTdGFydC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/C\#Projects/ParkingZoneProject/ParkingZone/Parking Zone/Views/Shared/_Layout.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9MYXlvdXQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = b-blp6ztwkm2

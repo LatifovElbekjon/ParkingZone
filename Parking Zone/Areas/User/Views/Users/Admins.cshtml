@@ -1,0 +1,30 @@
+﻿@using ParkingZone.ViewModels.UserVMs
+@model IEnumerable<UserViewModel>
+
+<h2>Admins</h2>
+
+<p>
+    <a class="btn btn-success" asp-area="Identity" asp-page="/Account/Manage/ManageUserRoles" title="Manage">Add admin</a>
+</p>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>Name</th>
+            <th>Phone</th>
+            <th>Email</th>
+            <th>Role</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var user in Model)
+        {
+            <tr>
+                <td>@user.UserName</td>
+                <td>@user.Phone</td>
+                <td>@user.Email</td>
+                <td>@user.Role</td>
+            </tr>
+        }
+    </tbody>
+</table>

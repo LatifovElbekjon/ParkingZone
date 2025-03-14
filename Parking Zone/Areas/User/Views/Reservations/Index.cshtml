@@ -1,0 +1,73 @@
+﻿@model IEnumerable<ParkingZone.ViewModels.ReservationVMs.ReservationsItemViewModel>
+
+@{
+    ViewData["Title"] = "My Reservations";
+}
+
+<h1 class="text-center mt-4">My Reservations</h1>
+
+<div class="container mt-4">
+    <!-- Filter dropdown -->
+    <div>
+        <div class="dropdown">
+            <button class="btn btn-primary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                Clear
+            </button>
+            <ul class="dropdown-menu">
+                <li><a class="dropdown-item" asp-action="DeleteReservations" asp-route-filter="All">All</a></li>
+                <li><a class="dropdown-item" asp-action="DeleteReservations" asp-route-filter="Finished">Finished</a></li>
+            </ul>
+        </div>
+    </div>
+
+    <table class="table table-hover table-striped shadow-sm">
+        <thead class="thead-dark">
+            <tr>
+                <th>@Html.DisplayNameFor(model => model.StartTime)</th>
+                <th>@Html.DisplayNameFor(model => model.Duration)</th>
+                <th>@Html.DisplayNameFor(model => model.Status)</th>
+                <th>@Html.DisplayNameFor(model => model.ZoneAdress)</th>
+                <th>@Html.DisplayNameFor(model => model.SlotNumber)</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var item in Model)
+            {
+                <tr>
+                    <td><span class="badge badge-secondary" style="color:darkblue;">@item.StartTime</span></td>
+                    <td><span class="badge badge-info" style="color:darkblue;">@item.Duration</span></td>
+                    <td>
+                        <span class="badge @(item.Status == ParkingZone.Enums.ReservationStatus.InProgress ? "alert-success" : "alert-warning")">
+                            @Html.DisplayFor(modelItem => item.Status)
+                        </span>
+                    </td>
+                    <td>@Html.DisplayFor(modelItem => item.ZoneAdress)</td>
+                    <td>@Html.DisplayFor(modelItem => item.SlotNumber)</td>
+                    <td>
+                        @if (item.Status != ParkingZone.Enums.ReservationStatus.Finished)
+                        {
+                            <a asp-controller="Reservations" asp-action="Prolong" asp-route-reservationId="@item.Id" class="btn btn-sm btn-primary">
+                                <i class="fas fa-clock"></i> Prolong
+                            </a>
+                        }
+                        else
+                        {
+                            <button class="btn btn-sm btn-secondary" disabled>
+                                <i class="fas fa-check"></i> Completed
+                            </button>
+                        }
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+</div>
+
+@section Scripts {
+    <script>
+        $(function () {
+            $('[data-toggle="tooltip"]').tooltip();
+        });
+    </script>
+}

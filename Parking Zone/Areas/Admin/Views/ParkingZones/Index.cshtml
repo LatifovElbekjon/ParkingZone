@@ -1,0 +1,32 @@
+﻿@model IEnumerable<ParkingZone.ViewModels.ZoneVMs.ParkingZonesListItemVM>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Zones</h1>
+
+<div style="padding: 20px 0;">
+   <a class="btn btn-dark" type="button" asp-action="Create">Create New</a>
+</div>
+
+
+<div class="row row-cols-1 row-cols-md-1 g-4">
+    @foreach(var zoneVM in Model)
+    {
+        <div class="card">
+            <div class="card-body">
+                <h5 class="card-title flex-lg-wrap">Zone: @zoneVM.Name,  Address: @zoneVM.Address</h5>
+                <p class="card-text">All slots: @zoneVM.AllSlots</p>
+                <p class="card-text">Free slots: @zoneVM.FreeSlotsCount</p>
+                <p class="card-text">Slots currently in use: @zoneVM.CurrentUsingSlotsCount</p>
+                <div style="bottom: 0; top: auto;">
+                    <a asp-action="Details" asp-route-zoneId="@zoneVM.Id" class="btn btn-secondary">Details</a>
+                    <a asp-action="Edit" asp-route-zoneId="@zoneVM.Id" class="btn btn-success">Edit</a>
+                    <a asp-action="Delete" asp-route-zoneId="@zoneVM.Id" class="btn btn-danger">Delete</a>
+                    <a asp-controller="Slots" asp-action="Index" asp-route-zoneId="@zoneVM.Id" class="btn btn-info">Slots</a>
+                </div>
+            </div>
+        </div>
+    }
+</div>

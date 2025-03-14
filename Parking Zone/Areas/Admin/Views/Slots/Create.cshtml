@@ -1,0 +1,57 @@
+﻿@using static System.Runtime.InteropServices.JavaScript.JSType;
+@using System.Reflection.Emit;
+@using System;
+@using ParkingZone.Enums
+@model ParkingZone.ViewModels.SlotVMs.CreateSlotViewModel
+
+@{
+    ViewData["Title"] = "Create";
+}
+
+<div class="container mt-5">
+    <div class="row justify-content-center">
+        <div class="col-md-6">
+            <div class="card shadow-lg">
+                <div class="card-header bg-primary text-white">
+                    <h3 class="card-title text-center">Create in @ViewData["ZoneName"]</h3>
+                </div>
+                <div class="card-body">
+                    <form asp-action="Create">
+                        <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+                        <input type="hidden" value="@Model.ZoneId" asp-for="ZoneId" />
+
+                        <div class="form-floating mb-3">
+                            <input class="form-control" asp-for="Number" placeholder="Slot Number" />
+                            <label asp-for="Number" class="form-label">Number</label>
+                            <span asp-validation-for="Number" class="text-danger"></span>
+                        </div>
+
+                        <div class="form-group mb-3">
+                            <label for="Tariff">Tariff</label>
+                            <select class="form-select" asp-for="Tariff" asp-items="Html.GetEnumSelectList<ESlotCategory>()"></select>
+                        </div>
+
+                        <div class="form-check mb-3">
+                            <input class="form-check-input" type="checkbox" asp-for="IsAvailableForBooking" />
+                            <label class="form-check-label" asp-for="IsAvailableForBooking">Is Available for Booking?</label>
+                        </div>
+
+                        <div class="d-grid gap-2">
+                            <button type="submit" class="btn btn-primary btn-lg">Create</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="text-center mt-3">
+    <a asp-action="Index" asp-route-zoneId="@Model.ZoneId" class="btn btn-secondary">Back to List</a>
+</div>
+
+@section Scripts {
+    @{
+        await Html.RenderPartialAsync("_ValidationScriptsPartial");
+    }
+}
